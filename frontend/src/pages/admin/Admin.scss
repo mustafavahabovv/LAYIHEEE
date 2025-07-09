@@ -1,0 +1,151 @@
+.form {
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #dddddd; // light mode üçün incə border
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+
+  input,
+  textarea,
+  select {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 10px;
+    background-color: #fff;
+    color: #222;
+
+    &:focus {
+      border: 1px solid #ff3c3c; // 🔴 fokus zamanı vurğu
+      outline: none;
+      box-shadow: 0 0 6px rgba(255, 60, 60, 0.3);
+    }
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: #888;
+  }
+
+  .customXBTN {
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+  }
+}
+
+.dark-mode {
+  .form {
+    background-color: #1e1e1e;
+    border: 1px solid #444;
+    box-shadow: 0 0 14px rgba(255, 255, 255, 0.08);
+    color: #f1f1f1;
+  }
+
+  .form input,
+  .form textarea,
+  .form select {
+    background-color: #2c2c2c;
+    color: #f1f1f1;
+    border: 1px solid #555;
+
+    &:focus {
+      border: 1px solid #00ffd5; // 🟢 fokus effekti dark modda
+      outline: none;
+      box-shadow: 0 0 6px rgba(0, 255, 213, 0.4);
+    }
+  }
+
+  .form input::placeholder,
+  .form textarea::placeholder {
+    color: #aaa;
+  }
+
+  .customXBTN {
+    color: #f1f1f1;
+  }
+}
+.pending-heading {
+  color: #dd2121; // Qırmızı rəng
+  font-weight: bold;
+  font-size: 28px;
+}
+
+textarea.form-control::placeholder {
+  color: #555; // Açıq ekran (light mode) üçün placeholder rəngi
+  opacity: 1;
+}
+
+[data-theme="dark"] textarea.form-control::placeholder {
+  color: #bbb; // Dark mode üçün açıq-boz rəng
+}
+
+.dark-mode h2 {
+  color: #ffffffec; // Tam ağ
+}
+
+// Light mode (default)
+.table {
+  background-color: #fff;
+  color: #222;
+
+  th, td {
+    border: 1px solid #000; // Daha görünən olsun
+    vertical-align: middle;
+  }
+
+  img {
+    border-radius: 10px;
+  }
+}
+
+// Dark mode üçün
+[data-theme="dark"] {
+  .table {
+    background-color: #1a1a1a;
+    color: #ddd;
+
+    th, td {
+      border: 1px solid #333;
+    }
+
+    .btn-primary {
+      background-color: #1e88e5;
+      border: none;
+
+      &:hover {
+        background-color: #1565c0;
+      }
+    }
+
+    .btn-danger {
+      background-color: #f9221f;
+      border: none;
+
+      &:hover {
+        background-color: #d31212;
+      }
+    }
+  }
+}
+.table tbody tr {
+  background: var(--card-bg);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .table tbody tr {
+  background: #1e1e1e;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.05);
+}
+

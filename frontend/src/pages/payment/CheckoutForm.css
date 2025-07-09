@@ -1,0 +1,52 @@
+.payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card-element-wrapper {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+  min-height: 56px; /* ✅ artırdıq */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.card-element-wrapper iframe {
+  height: 100% !important;
+  width: 100% !important;
+  min-height: 40px !important;
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  background: transparent !important;
+  border: none !important;
+}
+
+
+.pay-button {
+  padding: 12px;
+  background-color: #4f46e5;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pay-button:hover {
+  background-color: #4338ca;
+}
+
+.card-element-wrapper iframe {
+  height: 40px !important;
+  width: 100% !important;
+  border: none;
+  outline: none;
+}
+

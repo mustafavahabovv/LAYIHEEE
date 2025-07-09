@@ -1,0 +1,155 @@
+.container {
+  margin-top: 10px;
+
+  h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 30px;
+  }
+
+  .support-replies-list {
+    .reply-box {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 20px;
+      transition: all 0.3s ease;
+
+      h5 {
+        font-size: 20px;
+        font-weight: bold;
+        color: var(--primary-color);
+      }
+
+      p {
+        color: var(--text-color);
+        margin-top: 8px;
+      }
+
+      .text-muted {
+        font-size: 12px;
+        color: var(--muted-text);
+      }
+
+      &:hover {
+        box-shadow: 0 0 20px rgba(0, 255, 200, 0.2);
+      }
+    }
+  }
+
+  .wishlist-items {
+    .wishlist-item {
+      background: var(--card-bg);
+      border-radius: 20px;
+      border: 1px solid var(--border-color);
+      padding: 20px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: scale(1.01);
+        box-shadow: 0 0 20px rgba(255, 0, 150, 0.1);
+      }
+
+      h3 {
+        font-size: 22px;
+        color: var(--primary-color);
+      }
+
+      p,
+      span {
+        color: var(--text-color);
+      }
+
+      .wishlist-img {
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+
+      button {
+        border-radius: 10px;
+        font-weight: 600;
+        transition: background 0.3s ease;
+
+        &.btn-primary {
+          background: var(--primary-btn);
+          border: none;
+
+          &:hover {
+            background: var(--primary-hover);
+          }
+        }
+
+        &.btn-danger {
+          background: var(--danger-btn);
+          border: none;
+
+          &:hover {
+            background: var(--danger-hover);
+          }
+        }
+      }
+    }
+  }
+}
+:root {
+  --primary-color: #222;
+  --text-color: #333;
+  --card-bg: #fff;
+  --border-color: #ddd;
+  --primary-btn: #4f46e5;
+  --primary-hover: #4338ca;
+  --danger-btn: #e53935;
+  --danger-hover: #c62828;
+  --muted-text: #888;
+}
+
+[data-theme="dark"] {
+  --primary-color: #fff;
+  --text-color: #ccc;
+  --card-bg: #1a1a1a;
+  --border-color: #333;
+  --primary-btn: #1e88e5;
+  --primary-hover: #1565c0;
+  --danger-btn: #ef5350;
+  --danger-hover: #d32f2f;
+  --muted-text: #aaa;
+}
+
+.message-heading {
+  position: relative;
+  left: 35%;
+  color: white;
+}
+
+.section-title {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 28px;
+  color: var(--text-color); // dark mode-a uyğun dəyişən
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 50px;
+  background-color: #ff3c3c; // qırmızı xətt
+  border-radius: 2px;
+}
+
+.description-text {
+  color: #cccccc; // Açıq boz — dark mode üçün uyğun
+  font-size: 16px;
+  line-height: 1.6;
+}
+
